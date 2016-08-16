@@ -47,8 +47,8 @@ public class ShareLayoutActivity extends AppCompatActivity {
         imagePath = Environment.getExternalStorageDirectory().toString() + "/AndroidExamples/" + now + ".png";
 
         View v1 = findViewById(R.id.lytScreenShot);//get screenShot object
-        v1.setDrawingCacheEnabled(true);
         //Size of screenShot equals choosen layout sizes
+        v1.setDrawingCacheEnabled(true);
         v1.layout(0, 0, v1.getMeasuredWidth(), v1.getMeasuredHeight());
         v1.buildDrawingCache(true);
         Bitmap bitmap = Bitmap.createBitmap(v1.getDrawingCache());
