@@ -8,9 +8,12 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.codealig.androidallexamples.fabric.FabricPluginActivity;
 import com.codealig.androidallexamples.sharelayout.ShareLayoutActivity;
 import com.codealig.androidallexamples.slidingtabs.SlidingTabsActivity;
 
+import com.crashlytics.android.Crashlytics;
+import io.fabric.sdk.android.Fabric;
 import java.util.ArrayList;
 
 /*
@@ -24,11 +27,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
 
         lstAll = (ListView) findViewById(R.id.lstAll);
         exampleTopics.add(Indexes.SHARE_LAYOUT, "Share Layout");
         exampleTopics.add(Indexes.SLIDING_TABS, "Sliding Tabs");
+        exampleTopics.add(Indexes.FABRIC, "Fabric Plugin Test");
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, exampleTopics);
         lstAll.setAdapter(adapter);
         lstAll.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -40,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case Indexes.SLIDING_TABS:
                         intent = new Intent(MainActivity.this, SlidingTabsActivity.class);
+                        break;
+                    case Indexes.FABRIC:
+                        intent = new Intent(MainActivity.this, FabricPluginActivity.class);
                         break;
                 }
                 startActivity(intent);

@@ -6,4 +6,5 @@ package com.codealig.androidallexamples;
 public class Indexes {
     public static final int SHARE_LAYOUT = 0;
     public static final int SLIDING_TABS = 1;
+    public static final int FABRIC=2;
 }

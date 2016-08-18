@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_green_light">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NullPointer Exception"
+        android:id="@+id/btnNullPointer"
+        android:onClick="makeNullPointerException"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IndexOutOfBounds Exception"
+        android:id="@+id/btnIndexException"
+        android:onClick="makeIndexOutOfBoundsException"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="After push the button, look to your fabric account!"
+        android:id="@+id/textView"
+        android:layout_gravity="center"
+        android:gravity="center" />
+</LinearLayout>

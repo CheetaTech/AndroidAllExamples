@@ -27,6 +27,14 @@
             android:name=".slidingtabs.SlidingTabsActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".fabric.FabricPluginActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="5ef511752ae4a2117c9a986763032b19ff807941" />
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
